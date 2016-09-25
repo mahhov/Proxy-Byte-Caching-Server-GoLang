@@ -2,11 +2,11 @@
 
 ## Proxy Server  
 #### Overview  
-1) satisfy as much of the request as possible from the cache
-2) if the source allows range requests, request any missing portions not found in the cache from the source
-3) if the source doese not allow range request, and cache did not contain the entirity of the user request, request the entirityd of the source
-4) add to the cache the portions of the user request it was missing
-5) return the user requests
+1) satisfy as much of the request as possible from the cache  
+2) if the source allows range requests, request any missing portions not found in the cache from the source  
+3) if the source doese not allow range request, and cache did not contain the entirity of the user request, request the entirityd of the source  
+4) add to the cache the portions of the user request it was missing  
+5) return the user requests  
 #### Example Inputs  
 localhost:8080/?s=http://techslides.com/demos/sample-videos/small.mp4&range=0-  
 localhost:8080/?s=http://techslides.com/demos/sample-videos/small.mp4&range=300-  
