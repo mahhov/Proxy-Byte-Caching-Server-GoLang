@@ -16,6 +16,7 @@ func printRemove(r *LinkRange, s int, e int) *LinkRange {
 	fmt.Println("x ", s, e)
 	r = r.RemoveRange(s, e)
 	r.Print()
+	fmt.Println()
 	return r
 }
 
@@ -23,6 +24,7 @@ func printRemove(r *LinkRange, s int, e int) *LinkRange {
 func TestX(t *testing.T) {
 	hundred := New(0, 100)
 	hundred.Print()
+	fmt.Println()
 	
 	hundred = printRemove(hundred, 6, 14)	// 0-5, 15-100
 	hundred = printRemove(hundred, 31, 54)	// 0-5, 15-30, 55-100
