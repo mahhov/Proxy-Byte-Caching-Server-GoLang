@@ -18,25 +18,25 @@ None
 		If our data is the alphabet                                                                           
 		And our cache contents are c.cache = [A, B, E, I, J]                                                  
 		And we request the 1st to 8th letters of the alphabet                                                 
-		f, rem := c.FillFromCache(0, 8)                                                                       
+		f, rem := c.FillFromCache("alpha", 0, 8)                                                                       
 		Then f = [A, B, _, _, E, _, _, _, I] // A, B, E, and I were found within the cache                    
 		And rem = (2,3), (5,7) // C to D, and F to H are missing                                              
 		Once we retrieve the missing letters (C, D, F, G, H)                                                  
 		We store add them to the cache                                                                        
-		By calling c.WriteToCache(2, [C, D])                                                                  
-		And c.WriteToCache(5, [F, G, H])                                                                      
-		Alternatively (recommended), c.FillCache(rem, [A, B, C, D, E, F, G, H, I])                            
+		By calling c.WriteToCache("alpha", 2, [C, D])                                                                  
+		And c.WriteToCache("alpha", 5, [F, G, H])                                                                      
+		Alternatively (recommended), c.FillCache("alpha", 0, rem, [A, B, C, D, E, F, G, H, I])                            
 		Which will then look at rem and do the above 2 calls to c.WriteToCache                                
-  
+	
 	How WriteToCache Works:                                                                          
 		// 01234567890                                                                                 
 		// ABCDEFGHIJK                                                                                 
 		Imagine cache = [B, C, D, E, I, J, K]                                                          
 		And nextCache = 0                                                                              
-		And cacheMap = [[1,4]:[0,3], [8,10]:[4,6]]                                                     
+		And cacheMap = ["alpha" : [[1,4]:[0,3], [8,10]:[4,6]] ]                                                    
 		Where [1,4] represents alpha[1:4] = B to E, [8,10] repreesents alpha[8:10] = I to K            
 		And [0,3] represents cache[0:3] and [4,6] represents cache[4,6]                                
-		Then calling WriteToCache(5, [F, G, H])                                                        
+		Then calling WriteToCache("alpha", 5, [F, G, H])                                                        
 		Will move nextCache to 3                                                                       
 		And alter cache to [F, G, H, E, I, J, K]                                                       
 		And add [5,7]:[0,2] (F to H) to cacheMap                                                       
