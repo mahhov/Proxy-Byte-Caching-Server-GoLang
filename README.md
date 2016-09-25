@@ -14,7 +14,6 @@ None
 **WriteToCache(source string, start int, body [] byte)**  -  1) store the contents of body in the cache. 2) add the mapping source->start->index of cache where body was stored. 3) remove/truncate mappings for the cache indices overwritten.  
 **FillCache(source string, start int, rem *linkRange.LinkRange, body [] byte)**  -  1) rem contains the portions of body that are not in the cache. 2) add those un-cached portions of body to the cache via WriteToCache(...) and update mappings.  
 #### Alphabet Example  
-ALPHABET EXAMPLE:                                                                                         
 	How FillFromCache Works:                                                                                
 		If our data is the alphabet                                                                           
 		And our cache contents are c.cache = [A, B, E, I, J]                                                  
