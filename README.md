@@ -3,10 +3,10 @@
 ## Proxy Server  
 #### Overview  
 #### Example Inputs  
-localhost:8080/?s=http:/<span></span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=0-  
-localhost:8080/?s=http:/<span></span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=300-  
-localhost:8080/?s=http:/<span></span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=0-1000  
-localhost:8080/?s=http:/<span></span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=300-1000  
+localhost:8080/?s=http:/<span> </span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=0-  
+localhost:8080/?s=http:/<span> </span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=300-  
+localhost:8080/?s=http:/<span> </span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=0-1000  
+localhost:8080/?s=http:/<span> </span>/techslides<span></span>.com/demos/sample-videos/small.mp4&range=300-1000  
 
 
 ## Cache  
